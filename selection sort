@@ -1,0 +1,29 @@
+package practise;
+
+public class array_18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr= {3,2,1};
+		selectionsort(arr);
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+" ");
+		}
+
+	}
+	public static void selectionsort(int arr[]) {
+		for (int smallest = 0; smallest < arr.length-1; smallest++) {
+			int i= smallest;
+			for (int j = smallest+1; j < arr.length; j++) {
+				if(arr[smallest]>arr[j]) {
+					smallest= j;
+				}
+			}
+			int temp= arr[smallest];
+			arr[smallest] = arr[i];
+			arr[i]= temp;
+			
+		}
+	}
+
+}
