@@ -1,0 +1,22 @@
+package practise;
+
+public class minmax {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		long [] arr= {3, 2, 1, 56, 10000, 167};
+		int min= (int) arr[0];
+		int max= (int) arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if(arr[(int) i]<min) {
+				min= (int) arr[i];
+			}
+			else if(arr[(int) i]>max) {
+				max= (int) arr[i];
+			}
+		}
+		System.out.println(min+" "+max);
+		//System.out.println(max);
+	}
+
+}
