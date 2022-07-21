@@ -1,0 +1,31 @@
+package practise;
+
+import java.util.Iterator;
+
+public class kadanes_algo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int [] arr= {4,1,2,3,-1,-10,4,7,-8,10};
+		System.out.println(maxsubarr(arr));
+	}
+	public static int maxsubarr(int arr[]) {
+		// setting osum and csum @ 0th index
+		int csum= 0;
+		int osum= 0;
+		//adding from 0th idx
+		for (int i = 1; i < arr.length; i++) {
+			if(csum>=0) {//if maru curr sum 0 thi vadhare che to ema add thai javu
+				csum += arr[i];
+			}
+			else {//agar pachad thi sum negative ave  che to new subarr banav
+				csum= arr[i];
+			}
+			if(csum> osum) {// agar maru csum vadhare che osum karta to ema update maar
+				osum= csum; 
+			}
+		}
+		return osum;
+	}
+
+}
