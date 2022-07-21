@@ -11,8 +11,8 @@ public class kadanes_algo {
 	}
 	public static int maxsubarr(int arr[]) {
 		// setting osum and csum @ 0th index
-		int csum= 0;
-		int osum= 0;
+		int csum= arr[0];
+		int osum= arr[0];
 		//adding from 0th idx
 		for (int i = 1; i < arr.length; i++) {
 			if(csum>=0) {//if maru curr sum 0 thi vadhare che to ema add thai javu
