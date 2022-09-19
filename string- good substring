@@ -1,0 +1,37 @@
+//find the max length of the vowel string
+package practise;
+
+public class good_substring {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String st= "adexaeiezlbua";
+		System.out.println(goodsubstring(st));
+		
+
+	}
+	public static int goodsubstring(String st) {
+		int ans =0;//for memorizing the max count
+		int count= 0;//for temporily counting the characters
+		for (int i = 0; i < st.length(); i++) {
+			char ch= st.charAt(i);
+			if(vowels(ch) ==true) {
+				count++;
+				
+			}
+			else {
+				ans= Math.max(ans, count);
+				count=0;
+			}
+		}
+		ans= Math.max(ans, count);
+		return ans;
+	}
+	public static boolean vowels(char ch) {
+		if(ch =='a'||ch=='e'||ch=='o'||ch=='i'||ch=='u') {
+			return true;
+		}
+		return false;
+	}
+
+}
